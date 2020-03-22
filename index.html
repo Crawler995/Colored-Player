@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Colored Player</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<audio src="" autoplay="autoplay"></audio>
+	<div class="container">
+		<div class="background"></div>
+		<div class="mask"></div>
+		<div class="main-frame">
+			<div class="settings">
+				<div class="control-spectrum" onclick="startDrawSpectrum()">开启频谱</div>
+				<div class="control-mask" onclick="changeMaskMode()">开启动态背景</div>
+				<div class="settings-tip">设置</div>
+			</div>
+			<div class="window-control">
+				<div class="minimize" onclick="minimize()">_</div>
+				<div class="close" onclick="closed()">╳</div>
+			</div>
+
+			<canvas id="spectrum" height="400px" width="500px"></canvas>
+			
+			<div class="music-list-wrap">
+				<div class="music-list">
+					<div class="cycle-mode" onclick="changeCycleMode()">顺序播放</div>
+					<div class="refresh" onclick="cleanAll()">清 空</div>
+					<ul></ul>
+				</div>
+			</div>
+
+			<div class="play-control">
+				<div class="pre-music" onclick="preMusic()"><</div>
+				<div class="play-pause" onclick="pause()">暂 停</div>
+				<div class="next-music" onclick="nextMusic()">></div>
+
+				<label class="add-music" for="upload-music">+</label>
+				<input type="file" id="upload-music" multiple="multiple">
+			</div>
+		</div>
+	</div>
+
+	<script src="files.js"></script>
+	<script src="draw.js"></script>
+	<script src="port.js"></script>
+</body>
+</html>

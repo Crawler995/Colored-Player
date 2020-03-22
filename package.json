@@ -1,0 +1,13 @@
+{
+	"name": "colored-player",
+	"version": "0.0.1",
+	"main": "index.html",
+	"window": {
+		"frame": false,
+		"resizable": false,
+		"position": "center",
+		"toolbar": false,
+		"width": 500,
+		"height": 500
+	}
+}
